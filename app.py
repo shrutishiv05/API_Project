@@ -3,7 +3,7 @@
 #loading pickle file
 #making predict endpoint
 
-
+from fastapi import FastAPI
 import pickle
 import pydantic
 from pydantic import BaseModel
@@ -53,3 +53,4 @@ with open('model.pkl','rb') as fs:
 def greet():
 
     return {"This is Project Home page go on docs for prediction"}
+
