@@ -1,7 +1,7 @@
 import streamlit as st 
 import requests
 
-API = 'http://127.0.0.1:8000/predict'
+API = "https://salary-api.onrender.com/predict"
 
 st.title("🚗 Car Price Prediction")
 name = st.text_input("Car Name", placeholder="e.g. Maruti Swift Dzire")
@@ -39,4 +39,5 @@ if st.button('Predict Now'):
         result = response.json()
         st.success(f"💰 Predicted Price: ₹{result['Prediction']:,}")
     else:
+
         st.error(f"{response.status_code} - {response.text}")
